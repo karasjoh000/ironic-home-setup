@@ -2,6 +2,29 @@
 venv_path: . 
 ansible_collections_path: .
 
+mysql: 
+  root_password: secret
+  username: ironic 
+  password: mysql_password
+ironic_db_password: ironic_db_password
+
+# Image configs
+deploy_image_filename: "user_image.qcow2" 
+
+# network configs 
+dhcp_pool_start: 192.168.0.100
+dhcp_pool_end: 192.168.0.199
+dhcp_lease_time: 1000m
+dhcp_static_mask: 255.255.254.0
+gateway: 192.168.0.1
+
+controller: 
+  user: ironic
+  network_interface: "wlp4s0"
+  mac: "2c:fd:a1:cd:ce:b2"
+  ip: 192.168.0.200
+
+
 
 # The ironic API URL for bifrost operations.  Defaults to localhost.
 # ironic_url: "http://localhost:6385/"

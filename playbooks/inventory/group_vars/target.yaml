@@ -75,8 +75,8 @@
 ironic_url: http://192.168.0.200:6385/
 network_interface: wlp4s0
 ironic_db_password: ironic_db_password
-mysql_username: root
-mysql_password: secret
+mysql_username: {{ mysql.user }}
+mysql_password: {{ mysql.password }}
 ssh_public_key_path: /Users/johnkarasev/.ssh/id_rsa.pub
 deploy_image_filename: user_image.qcow2
 create_image_via_dib: false
