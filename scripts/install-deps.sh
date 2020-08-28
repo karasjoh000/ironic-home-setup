@@ -1,7 +1,7 @@
 #!/bin/bash
 set -xeu
 
-declare -A PKG_MAP
+declare -a PKG_MAP
 
 # workaround: for latest bindep to work, it needs to use en_US local
 export LANG=c
