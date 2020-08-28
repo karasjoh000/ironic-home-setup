@@ -1,8 +1,40 @@
 ---
   - hosts: localhost
 
+    become_user: root
+
     tasks: 
+      - name: "Install git, python tools, and mysql"
+      become: yes
+      yum: 
+        name: 
+          - community-mysql-server
+          - git
+          - python-setuptools
+          - pip
     
+    - name: Resart mysqld
+      become: yes
+      service: 
+        name: mysqld 
+        state: restarted
+
+    - name: "Install PyMySQL python module via pip"
+      become: yes 
+      pip: 
+        name: PyMySQL
+    
+    - name: "Create and configure mysql users"
+      become: yes
+      mysql_user: 
+        login_host: root
+        password: "{{ mysql.root_password }}"
+      mysql_user: 
+        name: "{{ mysql.username }}"
+        password: "{{ mysql.password }}"
+        priv: "*.*:ALL"
+        state: present
+
       - name: "export venv and export collections"
         environment:  
           VENV: "{{ venv_path }}"
