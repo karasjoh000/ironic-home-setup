@@ -1,0 +1,14 @@
+---
+  - hosts: localhost
+
+    tasks: 
+    
+      - name: "export venv and export collections"
+        environment:  
+          VENV: "{{ venv_path }}"
+        environment: 
+          ANSIBLE_COLLECTIONS_PATHS: "{{ ansible_collections_path }}"
+        shell: bash ../scripts/env-setup.sh
+        
+      - name: "source stuff"
+        shell: source ../bin/activate

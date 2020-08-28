@@ -1,4 +1,8 @@
 ---
+venv_path: . 
+ansible_collections_path: .
+
+
 # The ironic API URL for bifrost operations.  Defaults to localhost.
 # ironic_url: "http://localhost:6385/"
 
@@ -9,10 +13,10 @@
 
 # password to use between services
 #service_password: aSecretPassword473z
-# mysql_username: Default mysql admin username
-mysql_username: root
-# mysql_password: Default mysql admin user password
-mysql_password:
+# # mysql_username: Default mysql admin username
+# mysql_username: root
+# # mysql_password: Default mysql admin user password
+# mysql_password:
 
 # The path to the SSH key to be utilized for testing and burn-in
 # to configuration drives. When set, it should be set in both baremetal
@@ -51,16 +55,16 @@ mysql_password:
 # deploy_image: "{{http_boot_folder}}/{{deploy_image_filename}}"
 
 # Setting to utilize diskimage-builder to create a bootable image.
-create_image_via_dib: true
-dib_image_type: vm
+# create_image_via_dib: true
+# dib_image_type: vm
 
 # Transform boot image is intended for use with the Ubuntu trusty image.
 # It makes the image bootable by installing Grub.
 # Setting to prepend a partition image with a boot sector and partition table.
-transform_boot_image: false
+# transform_boot_image: false
 
 # Create IPA image instead of downloading an pre-made IPA image.
-create_ipa_image: false
+# create_ipa_image: false
 
 # Dnsmasq default route for clients. If not defined, dnsmasq will push to
 # clients as default route the same IP of the dnsmasq server.
