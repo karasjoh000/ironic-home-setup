@@ -1,0 +1,28 @@
+--- 
+  bm01: 
+    uuid: 00000000-0000-0000-0000-000000000001
+    name: bm01
+    driver: "manual-management"
+    nics: 
+      mac: 00:1f:bc:08:66:9f
+      mac: 00:1f:bc:08:66:a0
+    ipv4_address: 192.168.0.201 
+    properties: 
+      cpu_arch: x86_64
+      ram: 8143
+      disk_size: 261
+      cpus: 4
+  bm02: 
+    uuid: 00000000-0000-0000-0000-000000000002
+    name: bm02
+    driver: "manual-management"
+    nics: 
+      mac: 70:54:d2:c5:70:3c 
+      mac: 70:54:d2:c5:70:3a
+    ipv4_address: 192.168.0.202
+    properties: 
+      cpu_arch: x86_64
+      ram: 16318
+      disk_size: 188
+      cpus: 8
+    
