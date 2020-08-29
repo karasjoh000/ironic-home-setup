@@ -72,7 +72,7 @@
 # Default: undefined
 # dnsmasq_dns_servers: 8.8.8.8,8.8.4.4
 
-ironic_url: http://192.168.0.200:6385/
+ironic_url: http://localhost:6385/
 network_interface: wlp4s0
 ironic_db_password: ironic_db_password
 mysql_username: {{ mysql.user }}
